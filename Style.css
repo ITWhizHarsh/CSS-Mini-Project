@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.main_box {
+    height: 100vh; /* Make sure the body covers the full viewport height */
+    background-image: url('photo.jpg'); /* Replace with your image file */
+    background-size: cover; /* Make sure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+}
+
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    transition: all 0.2s linear;
+}
+
+.sidebar_menu {
+    position: absolute;
+    left: -350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    height: 100vh;
+    box-shadow: 0 0 6px white;
+    border-radius: 15px;
+    transition: all 0.3s linear;
+    
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    color: aqua;
+    text-decoration: none;
+    left: 70px;
+    font-size: 25px;
+    line-height: 60px;
+
+}
+
+.sidebar_menu .menu a{
+    position: absolute;
+    left: 50px;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+.sidebar_menu .menu {
+    position: absolute;
+    padding-right: 5px;
+    color: aqua;
+    width: 100%;
+    top: 80px;
+    line-height: 60px;
+    
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    color: white;
+    opacity: 0.5;
+}
+
+.sidebar_menu .social_media i{
+    padding: 5px; 
+    color: white;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 60px;
+    transition: all 0.2s linear;
+}
+
+.sidebar_menu .menu li {
+    margin-top: 10px;
+    padding: 15px 20px;
+    list-style-type: none;
+    width: 87%;
+    position: relative;
+    margin-left: 0px;
+    
+}
+
+.btn_two {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    left: 270px;
+    line-height: 60px;
+    opacity: 0;
+}
+
+.btn_two i{
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.btn_one i{
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.sidebar_menu .social_media i:hover{
+    transform: scale(1.5);
+    opacity: 1;
+    color: white;
+}
+
+.btn_one:hover {
+    font-size: 40px;
+}
+
+.btn_two:hover {
+    font-size: 30px;
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0px;
+}
+
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}
